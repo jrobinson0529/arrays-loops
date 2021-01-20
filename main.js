@@ -1,21 +1,50 @@
-const students = ['Katy', 'Jackie', 'Sean', 'Nathan'];
-// console.log(students.length);
+// for (let i = 0; i <= 15; i++) {
+// console.log(i);
+// }
 
-// ******** ACCESSING ITEMS IN ARRAY ********
-// console.log(students.pop());
-// console.log(students[3]); or console.log(students[students.length - 1]); to see what the last index of an array is.
+// const functionForTad = () => {
+//   for (let i = 0; i <= 15; i++) {
+//     console.log(i);
+//   }
+// };
 
-students[0] = "Matthew";
-// console.log(students)
+// functionForTad();
 
-const valuePrinter = (array, index) => {
-  return array[index];
+// ******** ARRAYS WITH LOOPS ********
+const ec14Instructors = ['Aja', 'Trinity', 'Dr. T', 'Discussion Tickets'];
+
+// for (let i = 0; i < ec14Instructors.length; i++) {
+//   console.log(ec14Instructors[i]);
+// }
+
+// ******** ARRAYS, LOOPS, FUNCTIONS ********
+
+const colors = ['red', 'orange', 'yellow,', 'green', 'blue', 'purple'];
+
+const colorLoop = (array) => {
+  let domString = '';
+
+  for (let i = 0; i < array.length; i++) {
+    domString += `<h1>${array[i]}</h1>`;
+  }
+  console.log(domString);
 };
-// console.log(valuePrinter(students, 2));
 
-const isNameHere = (array, name) => {
- return (array.includes(name) ? `${name} is here` : `${name} is not here`);
+// colorLoop(colors);
+
+const instructors = [
+  { first: 'Trinity', last: 'Christiana'},
+  { first: 'Aja', last: 'Washington'},
+  { first: 'Teresa', last: 'Vasquez'},
+];
+
+const nameLoop = () => {
+  let domString = '';
+
+  for (let i = 0; i < instructors.length; i++) {
+    domString += `<h1>${instructors[i].first} ${instructors[i].last}</h1>`;
+  }
+  console.log(domString);
 };
 
-console.log(isNameHere(students, 'Greg'));
-console.log(isNameHere(students, 'Sean'));
+nameLoop();
